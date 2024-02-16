@@ -149,9 +149,9 @@ class Program
             if (gameActions.GameMessages.Any())
             {
                 Console.WriteLine();
-                Console.WriteLine("Last 10 messages:");
+                Console.WriteLine("Last message:");
                 Console.WriteLine(new string('-', Console.WindowWidth));
-                foreach (var msg in gameActions.GameMessages.TakeLast(10))
+                foreach (var msg in gameActions.GameMessages.TakeLast(1))
                 {
                     Console.WriteLine($"{msg.Type,-30} {msg.Message}");
                 }
