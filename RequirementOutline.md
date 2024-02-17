@@ -1,4 +1,4 @@
-# Outline of requirements derived from the use cases:
+8# Outline of requirements derived from the use cases:
 [*] Schedule 5 move forward with W
 [*] Rotate 20` Left with A
 [*] Rotate 1` Left with A + Shift
@@ -11,7 +11,7 @@
 [*] Repair ship with R
 [*] keys 1~9 to choose the weapon
 [*] Escape route with F
-[] Quit the game with Delete
+[*] Quit the game with Delete
 [] While in the shop press X to quit the shop
 [] When the shop displays list of Weapons, assigns an Id to each so User can Input only the ID of the desired weapon
 [] Press Z to fire 20 times

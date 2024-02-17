@@ -22,6 +22,7 @@ class Program
         const ConsoleKey repairKey = ConsoleKey.R; // repair
         const ConsoleKey readAndEmptyMessagesKey = ConsoleKey.M;
         const ConsoleKey escapeRouteKey = ConsoleKey.F;
+        const ConsoleKey quitGame = ConsoleKey.Delete;
 
         Uri baseAddress = getApiBaseAddress(args);
         using HttpClient httpClient = new HttpClient() { BaseAddress = baseAddress };
@@ -130,6 +131,10 @@ class Program
                     await gameActions.RotateLeftAsync(shiftPressed);
                     await gameActions.MoveForwardAsync(shiftPressed);
                     break;
+                case var key when key == quitGame:
+                    exitGame = true;
+                    break;
+
             }
         }
 
