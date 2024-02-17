@@ -4,8 +4,8 @@
 [*] Rotate 1` Left with A + Shift
 [*] Rotate 20` Right with D
 [*] Rotate 1` Right with D + Shift
-[] Shop with C
-[] Clear queue with S
+[*] Shop with C
+[*] Clear queue with S
 [] Fire with SPACE
 [] The shop displays a list of All Weapon options
 [] Repair ship with R
