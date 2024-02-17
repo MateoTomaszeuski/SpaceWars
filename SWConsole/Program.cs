@@ -115,7 +115,7 @@ class Program
                     await gameActions.ReadAndEmptyMessagesAsync();
                     Console.WriteLine("Message queue read.");
                     break;
-                case var key when key >= ConsoleKey.D0 && key <= ConsoleKey.D9:
+                case var key when key >= ConsoleKey.D0 && key <= ConsoleKey.D9: // keys 1~9 select weapon
                     gameActions.SelectWeapon(key);
                     Console.WriteLine($"Selected weapon {((char)key) - '1'} ({gameActions.CurrentWeapon}");
                     break;

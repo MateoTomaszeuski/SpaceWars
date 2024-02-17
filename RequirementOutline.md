@@ -9,7 +9,7 @@
 [*] Fire with SPACE
 [*] The shop displays a list of All Weapon options
 [*] Repair ship with R
-[] keys 1~9 to choose the weapon
+[*] keys 1~9 to choose the weapon
 [] Escape route with F
 [] Quit the game with Delete
 [] While in the shop press X to quit the shop
