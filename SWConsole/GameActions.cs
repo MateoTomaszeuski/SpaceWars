@@ -37,7 +37,7 @@ public class GameActions
     public async Task MoveForwardAsync(bool lightSpeed)
     {
         heading = ClampRotation(heading);
-        var actions = Enumerable.Range(0, lightSpeed ? 10 : 1)
+        var actions = Enumerable.Range(0, lightSpeed ? 10 : 5)
                 .Select(n => new QueueActionRequest("move", heading.ToString()));
         await apiService.QueueAction(actions);
     }
