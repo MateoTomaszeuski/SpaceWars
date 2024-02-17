@@ -98,7 +98,7 @@ class Program
                     }
                     Console.WriteLine("please enter what you'd like to purchase from the shop, (if you've changed your mind enter x)");
                     var response = Console.ReadLine();
-                    if (response == "x")
+                    if (response == "x") // quit shopping
                     {
                         continue;
                     }
