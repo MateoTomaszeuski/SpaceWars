@@ -15,7 +15,7 @@ class Program
         const ConsoleKey forwardKey = ConsoleKey.W;
         const ConsoleKey leftKey = ConsoleKey.A;
         const ConsoleKey rightKey = ConsoleKey.D;
-        const ConsoleKey fireKey = ConsoleKey.Spacebar; // 
+        const ConsoleKey fireKey = ConsoleKey.Spacebar;
         const ConsoleKey clearQueueKey = ConsoleKey.S;
         const ConsoleKey infoKey = ConsoleKey.I;
         const ConsoleKey shopKey = ConsoleKey.C;
@@ -90,7 +90,10 @@ class Program
                     }
                     break;
                 case var key when key == shopKey:
-
+                    foreach (var item in Shop)
+                    {
+                        Console.WriteLine($"upgrade: {item.Name}");
+                    }
                     Console.WriteLine("please enter what you'd like to purchase from the shop, (if you've changed your mind enter x)");
                     var response = Console.ReadLine();
                     if (response == "x")
