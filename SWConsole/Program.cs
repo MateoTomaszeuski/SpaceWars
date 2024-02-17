@@ -18,7 +18,7 @@ class Program
         const ConsoleKey fireKey = ConsoleKey.Spacebar;
         const ConsoleKey clearQueueKey = ConsoleKey.C;
         const ConsoleKey infoKey = ConsoleKey.I;
-        const ConsoleKey shopKey = ConsoleKey.S;
+        const ConsoleKey shopKey = ConsoleKey.C;
         const ConsoleKey repairKey = ConsoleKey.R;
         const ConsoleKey readAndEmptyMessagesKey = ConsoleKey.M;
 
