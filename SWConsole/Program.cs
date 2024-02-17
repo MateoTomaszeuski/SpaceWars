@@ -16,6 +16,7 @@ class Program
         const ConsoleKey leftKey = ConsoleKey.A;
         const ConsoleKey rightKey = ConsoleKey.D;
         const ConsoleKey fireKey = ConsoleKey.Spacebar; //fire
+        const ConsoleKey fire20Key = ConsoleKey.Z; //fire 20 times
         const ConsoleKey clearQueueKey = ConsoleKey.S;
         const ConsoleKey infoKey = ConsoleKey.I;
         const ConsoleKey shopKey = ConsoleKey.C;
@@ -23,6 +24,7 @@ class Program
         const ConsoleKey readAndEmptyMessagesKey = ConsoleKey.M;
         const ConsoleKey escapeRouteKey = ConsoleKey.F;
         const ConsoleKey quitGame = ConsoleKey.Delete;
+
 
         Uri baseAddress = getApiBaseAddress(args);
         using HttpClient httpClient = new HttpClient() { BaseAddress = baseAddress };
@@ -76,6 +78,12 @@ class Program
                 case var key when key == fireKey:
                     await gameActions.FireWeaponAsync();
                     break;
+                case var key when key == fire20Key:
+                    for (int i = 0; i < 20; i++)
+                    {
+                        await gameActions.FireWeaponAsync();
+                    }
+                    break;
                 case var key when key == clearQueueKey:
                     await gameActions.ClearQueueAsync();
                     break;
@@ -92,13 +100,13 @@ class Program
                     }
                     break;
                 case var key when key == shopKey:
-                    int i = 0;
+                    int j = 0;
                     List<string> weapons = new List<string>();
                     foreach (var item in Shop)
                     {
-                        Console.WriteLine($"Weapon: {item.Name} ID:{i}" );
+                        Console.WriteLine($"Weapon: {item.Name} ID:{j}");
                         weapons.Add(item.Name);
-                        i++;
+                        j++;
                     }
                     Console.WriteLine("please enter what you'd like to purchase from the shop, you can input the weapon's id, (if you've changed your mind enter x)");
                     var response = Console.ReadLine();
