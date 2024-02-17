@@ -6,7 +6,7 @@
 [*] Rotate 1` Right with D + Shift
 [*] Shop with C
 [*] Clear queue with S
-[] Fire with SPACE
+[*] Fire with SPACE
 [] The shop displays a list of All Weapon options
 [] Repair ship with R
 [] keys 1~9 to choose the weapon
