@@ -92,17 +92,24 @@ class Program
                     }
                     break;
                 case var key when key == shopKey:
+                    int i = 0;
+                    List<string> weapons = new List<string>();
                     foreach (var item in Shop)
                     {
-                        Console.WriteLine($"upgrade: {item.Name}");
+                        Console.WriteLine($"Weapon: {item.Name} ID:{i}" );
+                        weapons.Add(item.Name);
+                        i++;
                     }
-                    Console.WriteLine("please enter what you'd like to purchase from the shop, (if you've changed your mind enter x)");
+                    Console.WriteLine("please enter what you'd like to purchase from the shop, you can input the weapon's id, (if you've changed your mind enter x)");
                     var response = Console.ReadLine();
                     if (response == "x") // quit shopping
                     {
                         continue;
                     }
-
+                    if (int.TryParse(response, out int index) && index < weapons.Count)
+                    {
+                        response = weapons[index];
+                    }
                     if (Shop.Any(item => item.Name.Equals(response, StringComparison.OrdinalIgnoreCase)))
                     {
                         await gameActions.PurchaseItemAsync(response);

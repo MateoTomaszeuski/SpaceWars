@@ -12,8 +12,8 @@
 [*] keys 1~9 to choose the weapon
 [*] Escape route with F
 [*] Quit the game with Delete
-[] While in the shop press X to quit the shop
-[] When the shop displays list of Weapons, assigns an Id to each so User can Input only the ID of the desired weapon
+[*] While in the shop press X to quit the shop
+[*] When the shop displays list of Weapons, assigns an Id to each so User can Input only the ID of the desired weapon
 [] Press Z to fire 20 times
 [] Press \ to get rid of current weapon
 [] Turn 180 degrees with ALT
