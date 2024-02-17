@@ -26,6 +26,7 @@ class Program
         const ConsoleKey escapeRouteKey = ConsoleKey.F;
         const ConsoleKey quitGame = ConsoleKey.Delete;
         const ConsoleKey removeWeaponKey = ConsoleKey.L;
+        const ConsoleKey copyPlayerKey = ConsoleKey.P;
 
 
         Uri baseAddress = getApiBaseAddress(args);
@@ -77,7 +78,7 @@ class Program
                 case var key when key == rightKey:
                     await gameActions.RotateRightAsync(shiftPressed);
                     break;
-                    case var key when key == turn180Key:
+                case var key when key == turn180Key:
                     await gameActions.Rotate180Async();
                     break;
                 case var key when key == fireKey:
@@ -157,6 +158,10 @@ class Program
                 case var key when key == removeWeaponKey:
                     gameActions.Weapons.Remove(gameActions.CurrentWeapon);
                     gameActions.CurrentWeapon = gameActions.Weapons.FirstOrDefault();
+                    break;
+                case var key when key == copyPlayerKey:
+                        joinGameResponse = await service.JoinGameAsync(username);
+                        token = joinGameResponse.Token;
                     break;
 
             }

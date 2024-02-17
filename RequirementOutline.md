@@ -16,6 +16,6 @@
 [*] When the shop displays list of Weapons, assigns an Id to each so User can Input only the ID of the desired weapon
 [*] Press Z to fire 20 times
 [*] Press L to get rid of current weapon
-[] Turn 180 degrees with K
-[] Create Copy of Player with `
+[*] Turn 180 degrees with K
+[*] Create Copy of Player with P
 [] Rotate 1 degree and Fire 360 times with /
