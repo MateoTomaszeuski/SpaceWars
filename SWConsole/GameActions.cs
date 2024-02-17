@@ -24,7 +24,7 @@ public class GameActions
     {
         heading = (direction, quickTurn) switch
         {
-            (Direction.Right, true) => heading + 10,
+            (Direction.Right, true) => heading + 1,
             (Direction.Right, false) => heading + 20,
             (Direction.Left, true) => heading - 1,
             (Direction.Left, false) => heading - 20,

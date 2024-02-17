@@ -2,7 +2,7 @@
 [*] Schedule 5 move forward with W
 [*] Rotate 20` Left with A
 [*] Rotate 1` Left with A + Shift
-[] Rotate 20` Right with D
+[*] Rotate 20` Right with D
 [] Rotate 1` Right with D + Shift
 [] Shop with C
 [] Clear queue with S
