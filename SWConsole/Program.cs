@@ -24,6 +24,7 @@ class Program
         const ConsoleKey readAndEmptyMessagesKey = ConsoleKey.M;
         const ConsoleKey escapeRouteKey = ConsoleKey.F;
         const ConsoleKey quitGame = ConsoleKey.Delete;
+        const ConsoleKey removeWeaponKey = ConsoleKey.L;
 
 
         Uri baseAddress = getApiBaseAddress(args);
@@ -148,6 +149,10 @@ class Program
                     break;
                 case var key when key == quitGame:
                     exitGame = true;
+                    break;
+                case var key when key == removeWeaponKey:
+                    gameActions.Weapons.Remove(gameActions.CurrentWeapon);
+                    gameActions.CurrentWeapon = gameActions.Weapons.FirstOrDefault();
                     break;
 
             }
