@@ -169,7 +169,7 @@ class Program
                     gameActions.CurrentWeapon = gameActions.Weapons.FirstOrDefault();
                     break;
                 case var key when key == copyPlayerKey:
-                    joinGameResponse = await service.JoinGameAsync(username);
+                    joinGameResponse = await service.JoinGameAsync(username + " clone");
                     token = joinGameResponse.Token;
                     break;
 
@@ -182,6 +182,8 @@ class Program
             Console.WriteLine($"Name: {username,-34} Token: {gameActions.Token}");
             Console.WriteLine($"Left: {leftKey,-12} Right: {rightKey,-12} Forward: {forwardKey,-12} Fire: {fireKey,-12} Clear Queue: {clearQueueKey,-12}");
             Console.WriteLine($"Info: {infoKey,-12}  Shop: {shopKey,-12}  Repair: {repairKey,-12} Read & Empty Messages: {readAndEmptyMessagesKey,-12}");
+            Console.WriteLine($"Fire 20 times: {fire20Key,-12}  Turn180: {turn180Key,-12}  Escape Route: {escapeRouteKey,-12} Remove Weapon: {removeWeaponKey,-12}");
+            Console.WriteLine($"Create clone: {copyPlayerKey,-12}  Shoot while turning 360: {shootAnd360Key,-12}  Quit: {quitGame,-12}");
 
             for (int i = 0; i < gameActions.Weapons.Count; i++)
             {
