@@ -15,6 +15,7 @@ class Program
         const ConsoleKey forwardKey = ConsoleKey.W;
         const ConsoleKey leftKey = ConsoleKey.A;
         const ConsoleKey rightKey = ConsoleKey.D;
+        const ConsoleKey turn180Key = ConsoleKey.K;
         const ConsoleKey fireKey = ConsoleKey.Spacebar; //fire
         const ConsoleKey fire20Key = ConsoleKey.Z; //fire 20 times
         const ConsoleKey clearQueueKey = ConsoleKey.S;
@@ -75,6 +76,9 @@ class Program
                     break;
                 case var key when key == rightKey:
                     await gameActions.RotateRightAsync(shiftPressed);
+                    break;
+                    case var key when key == turn180Key:
+                    await gameActions.Rotate180Async();
                     break;
                 case var key when key == fireKey:
                     await gameActions.FireWeaponAsync();

@@ -19,7 +19,16 @@ public class GameActions
     public async Task RotateLeftAsync(bool quickTurn) => await rotate(Direction.Left, quickTurn);
 
     public async Task RotateRightAsync(bool quickTurn) => await rotate(Direction.Right, quickTurn);
-
+    public async Task Rotate180Async() => await rotate180(Direction.Right, true);
+private async Task rotate180(Direction direction, bool quickTurn)
+    {
+        heading = (direction, quickTurn) switch
+        {
+            (Direction.Right, true) => heading + 180,
+        };
+        heading = ClampRotation(heading);
+        await apiService.QueueAction([new("changeHeading", heading.ToString())]);
+    }
     private async Task rotate(Direction direction, bool quickTurn)
     {
         heading = (direction, quickTurn) switch
