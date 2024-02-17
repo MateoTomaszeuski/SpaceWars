@@ -15,11 +15,11 @@ class Program
         const ConsoleKey forwardKey = ConsoleKey.W;
         const ConsoleKey leftKey = ConsoleKey.A;
         const ConsoleKey rightKey = ConsoleKey.D;
-        const ConsoleKey fireKey = ConsoleKey.Spacebar;
+        const ConsoleKey fireKey = ConsoleKey.Spacebar; //fire
         const ConsoleKey clearQueueKey = ConsoleKey.S;
         const ConsoleKey infoKey = ConsoleKey.I;
         const ConsoleKey shopKey = ConsoleKey.C;
-        const ConsoleKey repairKey = ConsoleKey.R;
+        const ConsoleKey repairKey = ConsoleKey.R; // repair
         const ConsoleKey readAndEmptyMessagesKey = ConsoleKey.M;
 
         Uri baseAddress = getApiBaseAddress(args);
