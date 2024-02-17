@@ -21,6 +21,7 @@ class Program
         const ConsoleKey shopKey = ConsoleKey.C;
         const ConsoleKey repairKey = ConsoleKey.R; // repair
         const ConsoleKey readAndEmptyMessagesKey = ConsoleKey.M;
+        const ConsoleKey escapeRouteKey = ConsoleKey.F;
 
         Uri baseAddress = getApiBaseAddress(args);
         using HttpClient httpClient = new HttpClient() { BaseAddress = baseAddress };
@@ -124,8 +125,10 @@ class Program
                 //***  |    |    |    |       Add any other custom keys here       |    |    |    |    |
                 //***  V    V    V    V                                            V    V    V    V    V
                 //**************************************************************************************
-                case ConsoleKey.N:
-                    //example
+                case var key when key == escapeRouteKey:
+                    await gameActions.MoveForwardAsync(shiftPressed);
+                    await gameActions.RotateLeftAsync(shiftPressed);
+                    await gameActions.MoveForwardAsync(shiftPressed);
                     break;
             }
         }
