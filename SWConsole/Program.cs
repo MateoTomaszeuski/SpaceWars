@@ -95,8 +95,8 @@ class Program
                 case var key when key == shootAnd360Key:
                     for (int i = 0; i < 360; i++)
                     {
-                        await gameActions.RotateRightAsync(true);
                         await gameActions.FireWeaponAsync();
+                        await gameActions.RotateRightAsync(true);
                     }
                     break;
                 case var key when key == clearQueueKey:

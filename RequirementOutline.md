@@ -18,4 +18,4 @@
 [*] Press L to get rid of current weapon
 [*] Turn 180 degrees with K
 [*] Create Copy of Player with P
-[] Rotate 1 degree and Fire 360 times with Q
+[*] Rotate 1 degree and Fire 360 times with Q
